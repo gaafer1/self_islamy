@@ -37,12 +37,17 @@ class _HomescreenState extends State<Homescreen> {
       body: screens[index],
 
       bottomNavigationBar: 
-      BottomNavigationBar(currentIndex: index,
+      BottomNavigationBar( 
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
+        backgroundColor:  const Color (0xffB7935F),
+        currentIndex: index,
        items:  [
-                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.quranImage),color: Colors.yellow,),label: "Quran"),
-                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.hadethImage),color: Colors.yellow),label: "hadeth"),
-                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.sebhaImage),color: Colors.yellow),label: "sebha"),
-                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.radioImage),color: Colors.yellow),label: "radio"),
+                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.quranImage)),label: "Quran"),
+                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.hadethImage)),label: "hadeth"),
+                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.sebhaImage)),label: "sebha"),
+                BottomNavigationBarItem(icon:ImageIcon(AssetImage(AppImages.radioImage)),label: "radio"),
        ],
        onTap:(value) {
          index=value;

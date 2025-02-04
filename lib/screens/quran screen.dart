@@ -29,13 +29,13 @@ class Quran_screen extends StatelessWidget {
         Image.asset(AppImages.quranIcon,
         height: MediaQuery.of(context).size.height*(220/870),),//heigh of slide 870 , heigh of image 220
         
-        Divider(color: Theme.of(context).primaryColor,),
+        const Divider(),
         Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
           Text("السورة",style: Theme.of(context).textTheme.bodyLarge,),
           Text("عدد الآيات",style: Theme.of(context).textTheme.bodyLarge),
         ],),
-        Divider(color: Theme.of(context).primaryColor,),
+        const Divider(),
 
         Expanded(
           child: ListView.builder(itemBuilder: (context,index)=>InkWell(child: Row(
@@ -46,7 +46,8 @@ class Quran_screen extends StatelessWidget {
             ],
           )
           ,onTap: (){
-            Navigator.of(context).pushNamed(QuranTab.routename,arguments: {"suraIndex":index});
+            Navigator.of(context).pushNamed(QuranTab.routename,
+            arguments: QuranModel(name: SurasName[index],index: index));
           },
           ),
           itemCount: SurasName.length,
@@ -55,4 +56,9 @@ class Quran_screen extends StatelessWidget {
     ],
     );
   }
+}
+class QuranModel{
+   String name;
+   int index;
+  QuranModel({required this.name,required this.index});
 }

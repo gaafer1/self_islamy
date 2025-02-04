@@ -4,6 +4,10 @@ import 'package:self_islamy/common/colors.dart';
 class AppTheme{
 
   static ThemeData lightTheme = ThemeData(
+   
+   dividerTheme: DividerThemeData(
+    color: AppColors.mainLightColor
+    ) ,
 
     colorScheme: ColorScheme(
       brightness: Brightness.light,
@@ -18,6 +22,9 @@ class AppTheme{
     ),
 
     appBarTheme:  AppBarTheme(
+      iconTheme: IconThemeData(
+        color: AppColors.blackColor
+      ),
       titleTextStyle: TextStyle(
         color: AppColors.blackColor,
         fontSize: 30,
@@ -68,6 +75,10 @@ class AppTheme{
 
   static ThemeData darkTheme = ThemeData(
 
+    dividerTheme: DividerThemeData(
+    color: AppColors.goldColor
+    ) ,
+
 colorScheme: ColorScheme(
   brightness: Brightness.dark,
    primary: AppColors.mainDarkColor, 
@@ -80,6 +91,9 @@ colorScheme: ColorScheme(
        onSurface: AppColors.whiteColor),
 
     appBarTheme:  AppBarTheme(
+      iconTheme: IconThemeData(
+        color: AppColors.whiteColor
+      ),
       titleTextStyle: TextStyle(
         color: AppColors.whiteColor,
         fontSize: 30,
@@ -99,7 +113,7 @@ colorScheme: ColorScheme(
       type: BottomNavigationBarType.shifting,
     ),
 
-    primaryColor: AppColors.mainDarkColor,
+    primaryColor: AppColors.goldColor,
     scaffoldBackgroundColor: Colors.transparent,
 
     textTheme: TextTheme(
@@ -109,7 +123,7 @@ colorScheme: ColorScheme(
         fontWeight: FontWeight.w600,
       ),
       bodyLarge: TextStyle(
-        color: AppColors.blackColor,
+        color: AppColors.goldColor,
         fontSize: 25,
         fontWeight: FontWeight.w400,
       ),

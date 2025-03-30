@@ -54,7 +54,7 @@ class _QuranTabState extends State<QuranTab> {
 
             virses.isEmpty ? const Expanded(child: Center(child: CircularProgressIndicator(),)) :
         Expanded(child:ListView.builder(
-          itemBuilder: (context, index) => Text(virses[index],
+          itemBuilder: (context, index) => Text("${virses[index]} ( ${index+1} )",
           style: Theme.of(context).textTheme.bodyLarge,
           textDirection: TextDirection.rtl,
           textAlign:TextAlign.center,)
@@ -69,7 +69,7 @@ class _QuranTabState extends State<QuranTab> {
 
    Future<void> loadSouraContect(int index)async{
   String data =await rootBundle.loadString("Assets/quran_text/${index+1}.txt"); 
-     virses = data.split("\n");
+     virses = data.trim().split("\n");
     setState(() {});
    }
 }

@@ -32,17 +32,17 @@ class Quran_screen extends StatelessWidget {
         const Divider(),
         Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-          Text("السورة",style: Theme.of(context).textTheme.bodyLarge,),
-          Text("عدد الآيات",style: Theme.of(context).textTheme.bodyLarge),
+          Text("السورة",style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center,),
+          Text("عدد الآيات",style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center),
         ],),
         const Divider(),
 
         Expanded(
           child: ListView.builder(itemBuilder: (context,index)=>InkWell(child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(SurasName[index],style: Theme.of(context).textTheme.bodyLarge,),
-              Text(versesNumber[index].toString(),style: Theme.of(context).textTheme.bodyLarge),
+            children: [ 
+              Text(SurasName[index],style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center),
+              Text(versesNumber[index].toString(),style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center),
             ],
           )
           ,onTap: (){

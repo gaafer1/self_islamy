@@ -32,8 +32,8 @@ class Quran_screen extends StatelessWidget {
         const Divider(),
         Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-          Text("السورة",style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center,),
-          Text("عدد الآيات",style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center),
+          Text("السورة",style: Theme.of(context).textTheme.titleLarge,textAlign: TextAlign.center,),
+          Text("عدد الآيات",style: Theme.of(context).textTheme.titleLarge,textAlign: TextAlign.center),
         ],),
         const Divider(),
 

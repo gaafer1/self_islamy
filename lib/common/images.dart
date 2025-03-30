@@ -11,4 +11,6 @@ class AppImages {
   static String iconBack="images/Icon_back.png";
   static String iconPlay="images/Icon_play.png";
   static String iconNext="images/Icon_next.png";
+  static String hadethHeader="images/hadith_header.png";
+
 }
